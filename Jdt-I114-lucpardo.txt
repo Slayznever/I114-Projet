@@ -2,3 +2,4 @@
 20 min: création du repo GitHub
 20 min: création du planning
 20 min: création du structurogramme
+60 min: regler problème avec github et repo local.
