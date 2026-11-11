@@ -1,0 +1,11 @@
+Gant:
+11.11.2026: administration (faire le repo, créer le projet sur vs studio, faire le pseudo code, etc)
+
+18.11.2026: debut du code(menu avec explications et choix des différentes fonctionnalitées, conversion en morse avec la saisie d'un mot ou une phrase)
+
+25.11.2026: debut de la deuxième fonctionnalitée. (choix numéro deux, explication de la fonctionalitée, conversion de base)
+02.12.2026: fin de la deuxième fonctionalitée. (terminer la conversion de bases)
+
+09.12.2026: debut de la dernière fonctionalitée. (choix numéro 3, saisie texte qui produit un text stéganographié)
+16.12.2026: suite de la dernière fonctionalitée. (collage d'un text stéganographié pour le decoder, validation des entrées)
+23.12.2026: fin de la dernière fonctionalitée. (copier text stéganographié en gardant les marqueurs invisibles actifs)
