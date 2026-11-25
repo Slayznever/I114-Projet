@@ -20,7 +20,7 @@ namespace P_114_couteau_suisse_lucapardo
         {
             Console.WriteLine("Veuillez choisir votre partie du couteau");
             Console.WriteLine("[1]: Conversion morse");
-            Console.WriteLine("[2]: A venir");
+            Console.WriteLine("[2]: Conversion bases");
             Console.WriteLine("[3]: A venir");
             Console.WriteLine("[0]: Quitter");
             Console.Write("Votre choix: ");
@@ -28,6 +28,7 @@ namespace P_114_couteau_suisse_lucapardo
             switch (choix) 
             {
                 case "1": Console.Clear(); CaracterBeep(ConvertionMorse()); break;
+                case "2": Console.Clear(); ConvertionBases(); break;
                 case "0": Environment.Exit(0); break;
                 default: Console.WriteLine("Veuillez réessayer"); Thread.Sleep(500); Console.Clear(); ShowMenu(); break;
 
@@ -101,5 +102,105 @@ namespace P_114_couteau_suisse_lucapardo
                 }
             }
         }
+
+        static void ConvertionBases()
+        {
+            Console.WriteLine("Veuillez choisir la base de la valeur que vous voulez convertir:");
+            Console.WriteLine("[1]: Base 2 à base 10");
+            Console.WriteLine("[2]: Base 10 à base 2");
+            Console.WriteLine("[3]: Base 16 à base 10");
+            Console.WriteLine("[4]: Base 10 à base 16");
+            Console.WriteLine("[5]: Base 8 à base 2");
+            Console.WriteLine("[6]: Base 2 à base 8");
+
+            Console.Write("Votre choix: ");
+            string choixBaseValeur = Console.ReadLine();
+
+            switch (choixBaseValeur)
+                {
+                    case "1":
+                        {
+                            Console.Write("Veuillez saisir une valeur en base 2 : ");
+                            string valeur = Console.ReadLine();
+                            int resultat = 0;
+                            int puissance = 0;
+                            for (int i = valeur.Length - 1; i >= 0; i--)
+                            {
+                                int bit = valeur[i] - '0';
+                                resultat += bit * (int)Math.Pow(2, puissance);
+                                puissance++;
+                            }
+                            Console.WriteLine("Résultat en base 10 : " + resultat);
+                            break;
+                        }
+                    case "2":
+                        {
+                            Console.Write("Veuillez saisir une valeur en base 10 : ");
+                            int valeur = int.Parse(Console.ReadLine());
+                            string resultat = "";
+                            while (valeur > 0)
+                            {
+                                int reste = valeur % 2;
+                                resultat = reste + resultat;
+                                valeur = valeur / 2;
+                            }
+                        Console.WriteLine("Résultat en base 2 : " + resultat);
+                            break;
+                        }
+                    case "3":
+                        {
+                            Console.Write("Veuillez saisir une valeur en base 16 : ");
+                            string valeur = Console.ReadLine().ToUpper();
+                            int resultat = 0;
+                            for (int i = 0; i < valeur.Length; i++)
+                            {
+                                    char chiffre = valeur[i];
+                                    int nombre;
+
+                                if (chiffre >= '0' && chiffre <= '9')
+                                {
+                                        nombre = chiffre - '0';
+                                }
+                                else 
+                                { 
+                                    nombre = chiffre - 'A' + 10;
+                                }
+                                    resultat = resultat * 16 + nombre;
+                            }
+
+                        Console.WriteLine("Résultat en base 10 : " + resultat);
+                            break;
+                        }
+                    case "4":
+                        {
+                            Console.Write("Veuillez saisir une valeur en base 10 : ");
+                            string resultat = "";
+
+
+                            Console.WriteLine("Résultat en base 16 : " + resultat);
+                            break;
+                        }
+                    case "5":
+                        {
+                            Console.Write("Veuillez saisir une valeur en base 8 : ");
+                            string valeur = Console.ReadLine();
+                            string resultatBinaire = "";
+
+                            Console.WriteLine("Résultat en base 2 : " + resultatBinaire);
+                            break;
+                        }
+                    case "6":
+                        {
+                            Console.Write("Veuillez saisir une valeur en base 2 : ");
+                            string valeur = Console.ReadLine();
+                            string resultatOctal = "";
+                            Console.WriteLine("Résultat en base 8 : " + resultatOctal);
+                            break;
+                        }
+                    default:
+                        Console.WriteLine("Choix invalide, veuillez réessayer."); Thread.Sleep(500); Console.Clear(); ConvertionBases(); break;
+                }
+        }
+
     }
 }

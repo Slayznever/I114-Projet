@@ -3,3 +3,14 @@
 20 min: création du planning
 20 min: création du structurogramme
 60 min: regler problème avec github et repo local.
+
+18.11.2026
+80 min: Code de la premiere fonctionnalitée
+30 min: structurogramme deuxième fonctionalitée
+25 min: Debut code deuxième fonctionalitée
+
+25.11.2026
+50 min: Feuille d'aide Test 1
+40 min: Première convertion (binaire à décimal)
+30 min: Deuxième convertion (décimal à binaire)
+45 min: Troisième convertion (décimal à hexadécimal)
